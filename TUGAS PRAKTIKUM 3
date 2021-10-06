@@ -1,0 +1,78 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	string nama;
+	int gol, jkerja, jlembur, gpokok, glembur;
+	float jmasuk, jkeluar;
+
+	cout << "Masukkan Nama              : ";
+	cin >> nama;
+	cout << "Masukkan Golongan          : ";
+	cin >> gol;
+	cout << "Masukkan Jam Masuk Kerja   : ";
+	cin >> jmasuk;
+	cout << "Masukkan Jam Keluar Kerja  : ";
+	cin >> jkeluar;
+	cout << endl << "===================================================================" << endl << endl;
+
+
+	jkerja = (jkeluar - jmasuk) * 22;
+	if (jkerja > 150) {
+		jlembur = jkerja - 150;
+	}
+	else {
+		jlembur = 0;
+	}
+
+	if (gol == 1) {
+		cout << "Nama                 : " << nama << endl;
+		cout << "Golongan             : " << gol << endl;
+		cout << "Gaji Pokok           : " << 1000000 << endl;
+		cout << "Gaji Lembur          : " << jlembur * 10000 << endl;
+		cout << "Gaji Diterima        : " << 1000000 + (jlembur * 10000) << endl;
+		cout << endl << endl;
+	}
+	else if (gol == 2) {
+		cout << "Nama                 : " << nama << endl;
+		cout << "Golongan             : " << gol << endl;
+		cout << "Gaji Pokok           : " << 2000000 << endl;
+		cout << "Gaji Lembur          : " << jlembur * 20000 << endl;
+		cout << "Gaji Diterima        : " << 2000000 + (jlembur * 20000) << endl;
+		cout << endl << endl;
+	}
+
+	else if (gol == 3) {
+		cout << "Nama                 : " << nama << endl;
+		cout << "Golongan             : " << gol << endl;
+		cout << "Gaji Pokok           : " << 3000000 << endl;
+		cout << "Gaji Lembur          : " << jlembur * 30000 << endl;
+		cout << "Gaji Diterima        : " << 3000000 + (jlembur * 30000) << endl;
+		cout << endl << endl;
+	}
+
+	else if (gol == 4) {
+		cout << "Nama                 : " << nama << endl;
+		cout << "Golongan             : " << gol << endl;
+		cout << "Gaji Pokok           : " << 4000000 << endl;
+		cout << "Gaji Lembur          : " << jlembur * 40000 << endl;
+		cout << "Gaji Diterima        : " << 4000000 + (jlembur * 40000) << endl;
+		cout << endl << endl;
+	}
+
+	else if (gol == 5) {
+		cout << "Nama                 : " << nama << endl;
+		cout << "Golongan             : " << gol << endl;
+		cout << "Gaji Pokok           : " << 5000000 << endl;
+		cout << "Gaji Lembur          : " << jlembur * 50000 << endl;
+		cout << "Gaji Diterima        : " << 5000000 + (jlembur * 50000) << endl;
+		cout << endl << endl;
+	}
+	else {
+		cout << "Nama                 : " << nama << endl;
+		cout << "Golongan             : " << gol << endl;
+		cout << "Terdapat kesalahan mohon ulangin lagi ";
+		cout << endl << endl;
+	}
+	return 0;
+}

@@ -1,0 +1,47 @@
+#include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	cout << "============================================================================\n";
+	cout << "\t\t\tTugas Algoritma Pemograman 1\n";
+	cout << "\t\t\tNama        : Lia Sabila\n";
+	cout << "\t\t\tAkun GitHub : https://github.com/realrvl \n";
+	cout << "============================================================================\n\n";
+
+	cout << "======================= Soal Nomor 1 =======================\n\n";
+	string yourName;
+	float nilai_tugas, nilai_uts, nilai_uas;
+	cout << "\t\tMenghitung Nilai Rata-Rata \n\n";
+	cout << "|Masukkan Nama Anda =	";
+	cin >> yourName;
+	cout << "|Silahkan Masukkan Nilai Tugas =";
+	cin >> nilai_tugas;
+	cout << "|Silahkan Masukkan Nilai UTS =";
+	cin >> nilai_uts;
+	cout << "|Silahkan Masukkan Nilai UAS =";
+	cin >> nilai_uas;
+	cout << "|Nilai Rata-Rata " << yourName << " adalah " << (nilai_tugas + nilai_uts + nilai_uas) / 3 << endl;
+	cout << endl;
+
+	cout << "======================= Soal Nomor 2 =======================\n\n";
+	float km, t;
+	cout << "\t\tMenghitung Kecepatan \n\n";
+	cout << "|Silahkan Masukkan Nilai (km) = ";
+	cin >> km;
+	cout << "|Silahkan masukkan nilai (t) = ";
+	cin >> t;
+	cout << endl;
+	cout << "|Kecepatannya adalah = " << km / t << " Km/Jam\n\n" << endl;
+
+	cout << "=============== ATAU  ===============\n\n";
+	float jarak = 750, waktu = 20;
+	cout << "|Menghitung Kecepatan \n";
+	cout << "|Jarak yang ditempuh " << jarak << " Kilometer \n";
+	cout << "|Waktu yang dibutuhkan " << waktu << " Jam \n";
+	cout << "|Kecepatannya adalah = " << jarak / waktu << " Km/Jam\n\n" << endl;
+
+	return 0;
+}

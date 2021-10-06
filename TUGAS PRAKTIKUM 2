@@ -1,0 +1,77 @@
+#include <iostream>
+#include <math.h>
+#include <cmath>
+
+using namespace std;
+
+int main()
+
+{
+
+
+	printf("============================================================================\n");
+	printf("\t\t\tTugas Algoritma Pemograman 1\n");
+	printf("\t\t\tNama        : Lia Sabila\n");
+	printf("\t\t\tAkun GitHub : https://github.com/realrvl \n");
+	printf("============================================================================\n\n");
+
+
+	int lagi, pilih;
+	float f, i, n, m, l, p, o;
+	f = 56700000;
+	i = 0.06;
+	n = 3;
+	m = 2;
+	l = f - ((f * i) * n);
+	p = f * i;
+	o = p * 6;
+
+	printf("======================= Soal Nomor 3 =======================\n\n");
+	cout << "\t	|Tabungan seorang Nasabah akan	    |" << endl;
+	cout << "\t	|menjadi Rp. 56.700.000 tiga tahun  |" << endl;
+	cout << "\t	|yang akan datang. jika tingakat    |" << endl;
+	cout << "\t	|bunga bank 6 %, maka	 	    |" << endl;
+	cout << "=====================================================" << endl;
+	cout << "|		  LAYANAN 		       |" << endl;
+	cout << "|----------------------------------------------|" << endl;
+	cout << "|1. UANG AWAL JANGKA WAKTU 3 TAHUN             |" << endl;
+	cout << "|2. UANG TOTAL JANGKA WAKTU PERSEMESTER	       |" << endl;
+	cout << "================================================" << endl;
+	cout << "SILAHKAN PILIH [1/2]" << endl;
+	cin >> pilih;
+	cout << endl;
+
+
+	if (pilih == 1)
+	{
+
+		cout << fixed << "Setiap tahun mendapatkan bunga Rp. " << p << endl;
+		cout << fixed << "Maka bunga selama 3 tahun sebanyak Rp. " << (f * i) * n << endl;
+		cout << fixed << "Uang awal yang dimiliki Nasabah sekarang adalah Rp.  " << f- ((f * i) * n) << endl;
+		cout << endl;
+		cout << "|----------------------------------------------|" << endl;
+		cout << "|  1. SELESAI		               |" << endl;
+		cout << "|  2. UANG TOTAL JANGKA WAKTU PERSEMESTER	       |" << endl;
+		cout << "|----------------------------------------------|" << endl;
+		cout << "SILAHKAN PILIH [1/2]" << endl;
+		cin >> pilih;
+		cout << endl;
+	}
+
+	if (pilih == 2)
+	{
+		cout << fixed << "Uang Awal Nasabah Rp. " << l << endl;
+		cout << fixed << "Setiap tahun mendapatkan bunga Rp. " << p << endl;
+		cout << fixed << "Total bunga selama 6 semester Rp.  " << p*6 << endl;
+		cout << fixed << "Maka total yang yang dimiliki adalah Rp. " << f-o << endl;
+		cout << "|----------------------------------------------|" << endl;
+		cout << "|  1. SELESAI						  |" << endl;
+		cout << "|----------------------------------------------|" << endl;
+		cout << "SILAHKAN PILIH [1]" << endl;
+		cin >> pilih;
+		cout << endl;
+	}
+
+
+	return 0;
+}

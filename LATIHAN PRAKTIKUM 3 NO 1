@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	int bil;
+	cout << "==================================================" << endl;
+	cout << "PROGRAM MENENTUKAN BILANGAN GANJIL/GENAP" << endl;
+	cout << "Masukkan sebuah bilangan bulat : ";
+	cin >> bil;
+
+	//menentukan bilangan
+	if (bil % 2) {
+		cout << bil << " Termasuk bilangan ganjil" << endl;
+	}
+	else {
+		cout << bil << " Termasuk bilangan genap" << endl;
+	}
+	cout << endl; 
+  retutn 0;
+}

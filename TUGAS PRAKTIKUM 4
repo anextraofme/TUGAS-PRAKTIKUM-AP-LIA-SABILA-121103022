@@ -1,0 +1,135 @@
+#include <iostream>
+using namespace std;
+
+void header(){
+    cout << "=====================================================\n";
+    cout << "		WELCOME TO LISA BANK" <<endl;
+    cout << "		   Pecahan 100.000" <<endl;
+	cout << "		      121103022" <<endl;
+    cout << "=====================================================\n";
+}
+
+void footer(){
+    cout << "=====================================================\n";
+    cout << "		   THANKS FOR YOUR VISIT" <<endl;
+    cout << "	     PLEASE CHECK YOUR MONEY AGAIN" <<endl;
+    cout << "	AND MAKE SURE NOTHING IS LEFT BEHIND" <<endl;
+    cout << "=====================================================\n";
+}
+int main() {    
+   int i;
+   int saldo_awal = 10000000, penarikan , debit , menu ;  
+   string pass_input;
+ 
+ 
+   string password = "121103022";    
+   string login = "block";    
+   i = 1;    
+   
+   do {        
+       cout << "PLEASE ENTER YOUR PIN = "; cin>>pass_input;        
+       if (pass_input == password){
+           i = 4;
+           login = "succed";        
+		
+            header();
+			menu :
+			    cout << "===============================================================\n";  
+                cout << "MENU OPTIONS = " <<endl;
+                cout << "1. WITHDRAWL" <<endl;
+                cout << "2. DEBIT" <<endl;
+                cout << "3. CHECK BALANCE" <<endl;
+                cout << "4. EXIT" <<endl;
+                cout << "ENTER MENU = " ; cin >> menu ;
+               switch(menu){
+                   case 1 :
+                   penarikan :
+                   cout << "------------------------------------------------\n"
+                        << "WITHDRAWL\n"
+                        << "------------------------------------------------\n";
+                        cout << "PLEASE ENTER THE AMOUNT OF MONEY YOU WANT TO WITHDRAWL = RP. " ; cin >> penarikan;
+                    if (penarikan%100000!=0 || penarikan<0){
+                        cout << "ENTER THE TOTAL AMOUNT OF MONEY IN MULTIPLES RP. 100.000\n";
+                        system("pause");
+                        system("cls");
+                        header();
+                        goto penarikan;
+                    }
+                    else {
+                        if (penarikan > saldo_awal){
+                            cout << "SORRY,YOUR BALLANCE IS NOT ENOUGH TO MAKE A WITHDRAWL \n";
+                        }
+                        else {
+                        saldo_awal -= penarikan;
+                        cout << "------------------------------------------------\n";
+                        cout << "PLEASE RECALCULATE THE MONEY YOU WITHDRAW " <<endl;
+                        cout << "TOTAL BALANCE NOW RP. " << saldo_awal << endl;
+                        cout << "------------------------------------------------\n";
+                        }
+                        system("pause");
+                        system("cls");
+                        header();
+                        goto menu;
+                    }
+                break;
+                case 2 :
+                    debit :
+                    cout << "------------------------------------------------\n"
+                         << "DEBIT\n"
+                         << "------------------------------------------------\n";
+                    cout << "PLEASE ENTER THE MONEY THAT YOU WANT TO DEBIT = RP. " ; cin >> debit;
+                    if (debit%100000!=0 || debit<0){
+                        cout << "ENTER THE TOTAL AMOUNT OF MONEY IN MULTIPLES RP. 100.000\n";
+                        system("pause");
+                        system("cls");
+                        header();
+                        goto debit;
+                    }
+                    else {
+                        saldo_awal += debit;
+                        cout << "------------------------------------------------\n";
+                        cout << "TOTAL BALANCE NOW RP. " << saldo_awal << endl;
+                        cout << "------------------------------------------------\n";
+                        system("pause");
+                        system("cls");
+                        header();
+                        goto menu;
+                    }
+                break;
+                case 3 :
+                    cout << "------------------------------------------------\n";
+                    cout << "CHECK SALDO" <<endl;
+                    cout << "------------------------------------------------\n";
+                    cout << "TOTAL BALANCE NOW RP. " << saldo_awal << endl;
+                    cout << "------------------------------------------------\n";
+                    system("pause");
+                    system("cls");
+                    header();
+                    goto menu;
+                break;
+                case 4:
+                   footer();
+                break;
+                default :
+                    cout << "THE CODE THAT YOU SELECTED DOES NO EXIST" <<endl;
+                    cout << " PLEASE MAKE SURE THE CODE THAT YOU ENTERED IS CORRECT";
+                    system("pause");
+                    system("cls");
+                    header();
+                    goto menu;
+                break;
+                }
+    }
+		else {            
+           cout << "============================\n";            
+           cout << "YOU HAVE ENTERED THE WRONG PIN! ("<<i<<"x)\n";
+		   cout << "=============================\n\n";            
+           i = i +1;
+       }   
+    } while (i <= 3);
+	
+    if(login != "succed"){
+       cout<<"YOU HAVE ENTERED THE WRONG PIN 3 TIMES.\n";       
+       cout<<"SORRY YOUR CARD HAS BEEN BLOCKED, CONTACT THE CALL CENTER IR VISIT THE NEAREST BANK..\n\n";   
+	}   
+}

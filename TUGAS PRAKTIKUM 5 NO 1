@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	float rata_rata, total;
+	int input;
+	total = 0;
+	int nilai[10];
+
+	int bil = 0;
+	cout << "Masukkan jumlah bilangan yang ingin anda masukkan = ";
+	cin >> input;
+	for (bil; bil < input; bil++)
+	{
+		cout << "Masukkan bilangan " << bil + 1 << " = ";
+		cin >> nilai[bil];
+		total = total + nilai[bil];
+		rata_rata = total / bil;
+	}
+	int n_kecil = nilai[0];
+	int n_besar = nilai[0];
+
+	for (bil = 0; bil < input; bil++)
+	{
+
+		if (nilai[bil] < n_kecil)
+		{
+			n_kecil = nilai[bil];
+		}
+		if (nilai[bil] > n_besar)
+		{
+			n_besar = nilai[bil];
+		}
+
+	}
+	cout << "Nilai terkecilnya adalah = " << n_kecil << endl;
+	cout << "Nilai terbesarnya adalah = " << n_besar << endl;
+	cout << "Rata-ratanya adalah = " << rata_rata << endl;
+
+	return 0;
+}
